@@ -1,0 +1,83 @@
+<meta charset="UTF-8">
+<form action="/register" method="post" enctype="multipart/form-data">
+    <!-- 个人信息 -->
+    <div style="margin-bottom: 15px;">
+        <h3>个人信息</h3>
+
+        <!-- 用户名与密码 -->
+        <div style="margin-bottom: 10px;">
+            <label>
+                用户名：
+                <input type="text" name="username" required>
+            </label><br>
+            <label>
+                密码：
+                <input type="password" name="password" required>
+            </label>
+        </div>
+
+        <!-- 性别 -->
+        <div style="margin-bottom: 10px;">
+            性别：
+            <label><input type="radio" name="gender" value="male"> 男</label>
+            <label><input type="radio" name="gender" value="female"> 女</label>
+        </div>
+
+        <!-- 生日 -->
+        <div style="margin-bottom: 10px;">
+            <label>
+                生日：
+                <input type="date" name="birthday">
+            </label>
+        </div>
+
+        <!-- 籍贯 -->
+        <div style="margin-bottom: 10px;">
+            <label>
+                籍贯：
+                <input type="text" list="hometown-list" name="hometown">
+            </label>
+            <datalist id="hometown-list">
+                <option value="北京">
+                <option value="上海">
+                <option value="广州">
+            </datalist>
+        </div>
+
+        <!-- 学历 -->
+        <div style="margin-bottom: 10px;">
+            <label>
+                学历：
+                <select name="education">
+                    <option value="">请选择</option>
+                    <option value="bachelor" selected>学士</option>
+                    <option value="master">硕士</option>
+                    <option value="doctor">博士</option>
+                </select>
+            </label>
+        </div>
+    </div>
+
+    <!-- 其他信息 -->
+    <div style="margin-bottom: 15px;">
+        <h3>其他信息</h3>
+
+        <!-- 喜欢的课程 -->
+        <div style="margin-bottom: 10px;">
+            喜欢的课程：
+            <label><input type="checkbox" name="courses" value="web" checked> Web开发技术</label>
+            <label><input type="checkbox" name="courses" value="java"> Java语言程序设计</label>
+            <label><input type="checkbox" name="courses" value="db"> 数据库原理</label>
+            <label><input type="checkbox" name="courses" value="test"> 系统分析与测试</label>
+        </div>
+
+        <!-- 照片上传 -->
+        <div style="margin-bottom: 10px;">
+            照片：<input type="file" name="photo" accept="image/*">
+        </div>
+    </div>
+
+    <!-- 按钮 -->
+    <button type="submit">提交</button>
+    <button type="reset">重置</button>
+</form>
